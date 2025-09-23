@@ -1,0 +1,357 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+#welcomeTitle {
+  margin-left: 30px;  
+  margin-top: 20px;    
+  font-size: 20px;     
+  font-weight: bold;   
+}
+
+/* ======================= */
+/* LOGIN */
+/* ======================= */
+
+.card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.card h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  color: #1e3a8a;
+}
+.card input, 
+.card select {
+  display: block;
+  margin: 12px auto;
+  padding: 12px 14px;
+  width: 90%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+/* Select personalizado */
+#gradoInput {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill%3D%22%231e3a8a%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-25%200L146.2%20185.2%2030.4%2069.4a17.6%2017.6%200%200%200-25%2025l132.3%20132.3a17.6%2017.6%200%200%200%2025%200L287%2094.4a17.6%2017.6%200%200%200%200-25z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+}
+
+.card input:focus,
+.card select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #eef4ff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.card button {
+  margin-top: 14px;
+  padding: 12px 20px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s, transform 0.2s ease;
+}
+.card button:hover { 
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Forzar que el desplegable siempre baje */
+select {
+  direction: ltr;
+}
+
+/* ======================= */
+/* Navbar */
+.navbar {
+  background: #1e3a8a;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+.navbar h1 {
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
+  text-align: center;
+}
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  max-width: 80%;
+  height: 100%;
+  background: #1e40af;
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1200;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+.sidebar.active {
+  transform: translateX(0);
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+.sidebar li {
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  background: #2563eb;
+  border-radius: 4px;
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+/* Secciones */
+.hidden { display: none !important; }
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 15px;
+}
+
+/* Horario */
+.horario {
+  border-collapse: collapse;
+  margin: 80px auto;
+  width: 95%;
+  max-width: 1000px;
+}
+.horario th, .horario td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.horario td {
+  cursor: pointer;
+  vertical-align: middle;
+}
+.plus { color: #6b7280; font-weight: bold; }
+
+.export-buttons {
+  margin: 20px auto;
+  text-align: center;
+}
+.export-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #1e3a8a;
+  color: white;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.export-buttons button:hover {
+  background: #2563eb;
+}
+
+/* Chat */
+.chat-box {
+  border: 1px solid #ddd;
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: white;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+}
+.close-btn-modal {
+  margin-top: 10px;
+  background: #1e3a8a;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Tarjeticas materias */
+.materias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.materia-card {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 12px;
+  width: 140px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+.materia-card:hover {
+  transform: scale(1.05);
+  border-color: #2563eb;
+}
+.materia-nombre {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.materia-profesor {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Noticias */
+#noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.noticia-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.noticia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.09);
+}
+.noticia-meta {
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  color:#6b7280;
+}
+.noticia-title {
+  font-size:16px;
+  font-weight:700;
+  color:#0f172a;
+  margin-top:2px;
+}
+.noticia-text {
+  font-size:14px;
+  color:#374151;
+  line-height:1.3;
+}
+.noticia-link {
+  margin-top:8px;
+  align-self:flex-start;
+  font-size:13px;
+  color:#1e40af;
+  text-decoration:none;
+  border-radius:6px;
+  padding:6px 8px;
+}
+.noticia-link:hover {
+  background:#f3f4f6;
+}
+.noticia-source {
+  font-size:12px;
+  color:#6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar h1 { font-size: 16px; }
+  .horario th, .horario td { padding: 6px; font-size: 12px; }
+  .materia-card { width: 120px; padding: 10px; }
+}
+@media (max-width: 520px) {
+  #noticias { grid-template-columns: 1fr; }
+}
+
+/* Forzar que el select siempre se abra hacia abajo */
+.card select {
+  position: relative;
+}
+
+.card select option {
+  direction: ltr;
+}
+
+/* Limitar el alto del desplegable para que no se vaya a toda la pantalla */
+#gradoInput {
+  max-height: 200px; /* Ajusta el tamaño visible */
+  overflow-y: auto;
+}

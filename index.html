@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario Interactivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1>Horario Interactivo</h1>
+  </div>
+
+  <!-- Sidebar -->
+  <nav id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <ul>
+      <li onclick="showSection('horario')">📅 Horario</li>
+      <li onclick="showSection('info')">ℹ️ Información</li>
+      <li onclick="showSection('chat')">💬 Chat</li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Login -->
+    <section id="loginSection" class="centered">
+      <div class="card">
+        <h2>Bienvenido</h2>
+        <input id="nombreInput" type="text" placeholder="Tu nombre">
+        <select id="gradoInput">
+          <option value="">-- Selecciona tu grado --</option>
+        </select>
+        <button onclick="login()">Ingresar</button>
+      </div>
+    </section>
+
+    <!-- Horario -->
+    <section id="horarioSection" class="hidden">
+      <h2 id="welcomeTitle"></h2>
+      <table id="horarioTable" class="horario"></table>
+
+      <div class="export-buttons">
+        <button onclick="exportToJPG()">📸 Descargar JPG</button>
+        <button onclick="exportToPDF()">📄 Descargar PDF</button>
+        <button onclick="exportToExcel()">📊 Descargar Excel</button>
+      </div>
+    </section>
+
+    <!-- Información semanal -->
+    <section id="infoSection" class="hidden">
+      <h2>Información semanal</h2>
+      <div id="noticias">
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">Tropicana FM</div>
+            <div class="noticia-date">2025-09-11</div>
+          </div>
+          <div class="noticia-title">Distrito abre 1.500 becas técnicas</div>
+          <div class="noticia-text">
+            El distrito lanzó 1.500 nuevas becas para programas técnicos laborales dirigidas a jóvenes. Revisa requisitos y fechas de inscripción.
+          </div>
+          <a class="noticia-link" href="https://www.tropicanafm.com/2025/distrito-abrio-mas-de-1-500-becas-en-programas-tecnicos-requisitos-y-como-postularse-449875.html" target="_blank">Leer más</a>
+        </article>
+
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">Reuters</div>
+            <div class="noticia-date">2025-09-11</div>
+          </div>
+          <div class="noticia-title">Gobierno reduce presupuesto de gastos 2026</div>
+          <div class="noticia-text">
+            El gobierno aprobó una reducción aproximada de 10 billones de pesos en el presupuesto de gastos para 2026.
+          </div>
+          <a class="noticia-link" href="https://www.reuters.com/world/RJRYIP2STVMHTEYWCQS3H77FUY-2025-09-11/" target="_blank">Leer más</a>
+        </article>
+
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">El País</div>
+            <div class="noticia-date">2025-09-12</div>
+          </div>
+          <div class="noticia-title">Solo 2 de cada 10 personas con discapacidad acceden al empleo</div>
+          <div class="noticia-text">
+            Informe reciente muestra brechas fuertes en acceso laboral para personas con discapacidad en Colombia.
+          </div>
+          <a class="noticia-link" href="https://elpais.com/america-colombia/2025-09-12/solo-2-de-cada-10-personas-con-discapacidad-acceden-al-mercado-laboral-en-colombia.html" target="_blank">Leer más</a>
+        </article>
+
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">MinTIC</div>
+            <div class="noticia-date">2025-09-10</div>
+          </div>
+          <div class="noticia-title">Ministerio TIC ofrece cursos gratuitos con certificación</div>
+          <div class="noticia-text">
+            Programas gratuitos con certificaciones internacionales para capacitación en tecnologías digitales; inscripción abierta en varias convocatorias.
+          </div>
+          <a class="noticia-link" href="https://www.mintic.gov.co/" target="_blank">Leer más</a>
+        </article>
+
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">MinTIC</div>
+            <div class="noticia-date">2025-09-08</div>
+          </div>
+          <div class="noticia-title">Colombia 4.0: encuentro de innovación y tecnología</div>
+          <div class="noticia-text">
+            Evento que reúne a emprendedores, desarrolladores y empresas de tecnología para exponer avances y oportunidades.
+          </div>
+          <a class="noticia-link" href="https://www.mintic.gov.co/" target="_blank">Leer más</a>
+        </article>
+
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">Semana</div>
+            <div class="noticia-date">2025-09-13</div>
+          </div>
+          <div class="noticia-title">Alerta por aumento de calor extremo en varias regiones</div>
+          <div class="noticia-text">
+            El IDEAM emitió alerta en varias zonas del país por el incremento de temperaturas y el riesgo de incendios forestales.
+          </div>
+          <a class="noticia-link" href="https://www.semana.com/" target="_blank">Leer más</a>
+        </article>
+
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">El Tiempo</div>
+            <div class="noticia-date">2025-09-14</div>
+          </div>
+          <div class="noticia-title">Avanza la construcción del tren de cercanías</div>
+          <div class="noticia-text">
+            El proyecto de movilidad del tren de cercanías continúa con la fase de infraestructura y beneficiará a más de 2 millones de personas.
+          </div>
+          <a class="noticia-link" href="https://www.eltiempo.com/" target="_blank">Leer más</a>
+        </article>
+
+        <article class="noticia-card">
+          <div class="noticia-meta">
+            <div class="noticia-source">Portafolio</div>
+            <div class="noticia-date">2025-09-15</div>
+          </div>
+          <div class="noticia-title">Dólar cierra a la baja en el mercado colombiano</div>
+          <div class="noticia-text">
+            La divisa estadounidense cerró la jornada con una leve caída frente al peso colombiano, generando expectativas positivas para importadores.
+          </div>
+          <a class="noticia-link" href="https://www.portafolio.co/" target="_blank">Leer más</a>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- Chat -->
+    <section id="chatSection" class="hidden">
+      <h2>Chat</h2>
+      <div id="messages" class="chat-box"></div>
+      <input id="chatInput" type="text" placeholder="Escribe un mensaje...">
+      <button onclick="sendMessage()">Enviar</button>
+    </section>
+  </main>
+
+  <!-- Modal selección de materia -->
+  <div id="selectModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Selecciona una materia</h3>
+      <div id="materiasList" class="materias-grid"></div>
+      <button class="close-btn-modal" onclick="hideModal('selectModal')">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal información de materia -->
+  <div id="infoModal" class="modal hidden">
+    <div class="modal-content">
+      <div id="infoContent"></div>
+      <button class="close-btn-modal" onclick="hideModal('infoModal')">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
