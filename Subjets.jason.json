@@ -1,0 +1,130 @@
+{
+  "profesores": [
+    {
+      "materia": "Inglés",
+      "nombre": "Santiago Osorio García",
+      "grados": ["7A", "10A", "10B", "10C", "11A", "11B", "11C"],
+      "correo": "santiago.osorio1996@gmail.com",
+      "tipo_ensenanza": "Trabajo de 4 habilidades, escucha, lectura, habla y escritura con una metodología bajo un aprendizaje basado en tareas y proyectos ABT y ABP.",
+      "foto": "img/profesores/Santiago_Osorio_Garcia.jpg",
+      "plan_aula": "docs/plan_ingles_santiago.pdf"
+    },
+    {
+      "materia": "Inglés",
+      "nombre": "Claudia Matilde Rave Montes",
+      "grados": ["6A","6B","6C","6D","7A","7B","7C"],
+      "correo": "claudia.rave@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Enseñanza tradicional con ayudas de tecnología, clases dinámicas.",
+      "foto": "img/profesores/Claudia_Matilde_Rave_Montes.jpg",
+      "plan_aula": "docs/plan_ingles_claudia.pdf"
+    },
+    {
+      "materia": "Sociales",
+      "nombre": "John Alexander Rentería",
+      "grados": ["8A","8B","9D","10B","10C","11A","11B","11C"],
+      "correo": "jhon.renteria@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Aprendizaje basado en proyectos, colaborativo, clase magistral.",
+      "foto": "img/profesores/John_Alexander_Rentería.jpg",
+      "plan_aula": "docs/plan_sociales_john.pdf"
+    },
+    {
+      "materia": "Tecnología",
+      "nombre": "Andres Vargas",
+      "grados": ["8A","8B","8C","9A","9B","9C"],
+      "correo": "andres.vargas@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Enseñanza experiencial, aprendizaje de conceptos aplicables a múltiples áreas, aprendizajes transversales, solución de problemáticas del entorno con la tecnología.",
+      "foto": "img/profesores/Andres_Vargas.jpg",
+      "plan_aula": "docs/plan_tecnologia_rene.pdf"
+    },
+    {
+      "materia": "Ciencias Naturales / Química",
+      "nombre": "René Marín Rodríguez",
+      "grados": ["7B","10A","10B","10C","11A","11B","11C"],
+      "correo": "rene.marin@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Uso estrategias didácticas flexibles que fortalezcan el aprendizaje autónomo, el trabajo en equipo y colaborativo, aprendizaje basado en proyectos, resolución de problemas, la descripción de fenómenos y el uso crítico de la información y el lenguaje científico.",
+      "foto": "img/profesores/René_Marín_Rodríguez.jpg",
+      "plan_aula": "docs/plan_ciencias_rene.pdf"
+    },
+    {
+      "materia": "Física / Matemáticas",
+      "nombre": "Jhon De Jesús Asprilla López",
+      "grados": ["6D","10A","10B","10C","11A","11B","11C"],
+      "correo": "jhon.asprilla@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Metodología constructivista y parte conductista, clases explicativas y en forma de charlas participativas.",
+      "foto": "img/profesores/Jhon_De_Jesús_Asprilla_López.jpg",
+      "plan_aula": "docs/plan_fisica_asprilla.pdf"
+    },
+    {
+      "materia": "Matemáticas / Geometría",
+      "nombre": "Eider Fabián Viana Erazo",
+      "grados": ["9A","9B","9C","9D","11B","11C"],
+      "correo": "eider.viana@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Clases dadas de forma magistrales tradicionales, uso de ejemplos prácticos, indagación y exploración de conocimientos.",
+      "foto": "img/profesores/Eider_Fabián_Viana_Erazo.jpg",
+      "plan_aula": "docs/plan_matematicas_viana.pdf"
+    },
+    {
+      "materia": "Matemáticas / Geometría",
+      "nombre": "German Cardona Ocampo",
+      "grados": ["6B","7A","7B","7C","8A","8B"],
+      "correo": "german.cardona@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Trabajo en base de tareas y trabajos, consultas, búsqueda de aplicaciones reales de la matemática, geometría, enseñanza a partir de historias y ejemplos reales.",
+      "foto": "img/profesores/German_Cardona_Ocampo.jpg",
+      "plan_aula": "docs/plan_matematicas_german.pdf"
+    },
+    {
+      "materia": "Matemáticas / Geometría",
+      "nombre": "Isabel Cristina Puerta González",
+      "grados": ["8C","10A","10B","10C","11A","11B","11C"],
+      "correo": "cristina.puerta@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Metodología activa participativa a través de guías de trabajo de aplicación en el aula.",
+      "foto": "img/profesores/Isabel_Cristina_Puerta_González.jpg",
+      "plan_aula": "docs/plan_matematicas_isabel.pdf"
+    },
+    {
+      "materia": "Filosofía / Sociales",
+      "nombre": "Jorge Iván Ocampo Martos",
+      "grados": ["7A","10A","10B","10C","11A","11B","11C"],
+      "correo": "ivan.ocampo@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Modelo constructivista dialógico.",
+      "foto": "img/profesores/Jorge_Iván_Ocampo_Martos.jpg",
+      "plan_aula": "docs/plan_filosofia_ocampo.pdf"
+    },
+    {
+      "materia": "Español",
+      "nombre": "Castro Sierra Paula Andrea",
+      "grados": ["8A","9A","9B","9C","11A","11B","11C","10A"],
+      "correo": "pao.castro@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "ABP, aprendizajes basados en proyectos, clases magistrales, gamificación.",
+      "foto": "img/profesores/Castro_Sierra_Paula_Andrea.jpg",
+      "plan_aula": "docs/plan_espanol_paula.pdf"
+    },
+    {
+      "materia": "Español",
+      "nombre": "Carlos Andrés Vélez Peláez",
+      "grados": ["6A","6B","6C","7A","7B"],
+      "correo": "carlos.velez@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Pedagogías socio-constructivista, pedagogía de la liberación.",
+      "foto": "img/profesores/Carlos_Andrés_Vélez_Peláez.jpg",
+      "plan_aula": "docs/plan_espanol_carlos.pdf"
+    },
+    {
+      "materia": "Educación Física",
+      "nombre": "Carlos Ariel Restrepo Trujillo",
+      "grados": ["7C","9C","9D","10A","10C","11A","11B","11C"],
+      "correo": "carlos.restrepo@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Solución de problemas y mando directo, indagación, progresión metodológica para llegar a un objetivo.",
+      "foto": "img/profesores/Carlos_Ariel_Restrepo_Trujillo.jpg",
+      "plan_aula": "docs/plan_edfisica_restrepo.pdf"
+    },
+    {
+      "materia": "Artística",
+      "nombre": "Julio César Osorio Cruz",
+      "grados": ["8A","8B","9C","10B","10C","11A"],
+      "correo": "julio.osorio@colpopulardiocesano.edu.co",
+      "tipo_ensenanza": "Aprendizaje basado en proyectos, aprendizaje colaborativo.",
+      "foto": "img/profesores/Julio_César_Osorio_cruz.jpg",
+      "plan_aula": "docs/plan_artistica_julio.pdf"
+    }
+  ]
+}
